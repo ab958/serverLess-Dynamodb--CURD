@@ -1,4 +1,4 @@
-import { MessagePort } from "worker_threads";
+//import { MessagePort } from "worker_threads";
 
 const AWS = require("aws-sdk");
 
@@ -7,7 +7,7 @@ const documentClient = new AWS.DynamoDB.DocumentClient({
   // endpoint: 'http://localhost:8000',
 });
 
-export const Dynamo = {
+const Dynamo = {
   async get(ID, TableName) {
     console.log(ID, "wqe");
     const params = {
@@ -90,4 +90,4 @@ export const Dynamo = {
     return res;
   },
 };
-// module.exports = Dynamo;
+export default Dynamo;

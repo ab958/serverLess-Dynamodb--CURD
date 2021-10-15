@@ -1,7 +1,7 @@
 import type { ValidatedEventAPIGatewayProxyEvent } from "@libs/apiGateway";
 import { formatJSONResponse } from "@libs/apiGateway";
 import { middyfy } from "@libs/lambda";
-import { Dynamo } from "../../libs/dynamo";
+import Dynamo from "../../libs/dynamo";
 // import schema from "./schema";
 
 const hello = async (event) => {
