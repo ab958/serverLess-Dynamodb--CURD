@@ -1234,7 +1234,10 @@ var middyfy = (handler) => {
 
 // src/libs/dynamo.ts
 var AWS = require("aws-sdk");
-var documentClient = new AWS.DynamoDB.DocumentClient({});
+var documentClient = new AWS.DynamoDB.DocumentClient({
+  region: "localhost",
+  endpoint: "http://localhost:8000"
+});
 var Dynamo = {
   async get(ID, TableName) {
     console.log(ID, "wqe");

@@ -3,8 +3,8 @@
 const AWS = require("aws-sdk");
 
 const documentClient = new AWS.DynamoDB.DocumentClient({
-  // region: 'localhost',
-  // endpoint: 'http://localhost:8000',
+  region: "localhost",
+  endpoint: "http://localhost:8000",
 });
 
 const Dynamo = {
